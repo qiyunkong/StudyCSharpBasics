@@ -6,6 +6,10 @@ namespace ConsoleApp11
 {
     public class Animal
     {
+        
+        public Animal() {
+            Console.WriteLine("I am Ainmal Constructer Function");
+        }
         //字段
         private string name;
         private int age;
@@ -32,6 +36,11 @@ namespace ConsoleApp11
                     Console.WriteLine("Age Beyond arrange");
                 }
             }
+        }
+
+        public virtual void Voice()
+        {
+            Console.WriteLine("动物的声音");
         }
     }
 }
