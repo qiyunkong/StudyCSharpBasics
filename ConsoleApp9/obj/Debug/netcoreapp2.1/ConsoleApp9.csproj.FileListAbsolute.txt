@@ -8,4 +8,3 @@ D:\Visual Studio 2017 Code\aspnet\StudyCSharpBasics\ConsoleApp9\obj\Debug\netcor
 D:\Visual Studio 2017 Code\aspnet\StudyCSharpBasics\ConsoleApp9\obj\Debug\netcoreapp2.1\ConsoleApp9.AssemblyInfo.cs
 D:\Visual Studio 2017 Code\aspnet\StudyCSharpBasics\ConsoleApp9\obj\Debug\netcoreapp2.1\ConsoleApp9.dll
 D:\Visual Studio 2017 Code\aspnet\StudyCSharpBasics\ConsoleApp9\obj\Debug\netcoreapp2.1\ConsoleApp9.pdb
-D:\Visual Studio 2017 Code\aspnet\StudyCSharpBasics\ConsoleApp9\obj\Debug\netcoreapp2.1\ConsoleApp9.csprojAssemblyReference.cache

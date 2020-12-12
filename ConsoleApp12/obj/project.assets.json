@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studio 2017 Code\\aspnet\\StudyCSharpBasics\\ConsoleApp11\\ConsoleApp11.csproj",
-      "projectName": "ConsoleApp11",
-      "projectPath": "D:\\Visual Studio 2017 Code\\aspnet\\StudyCSharpBasics\\ConsoleApp11\\ConsoleApp11.csproj",
+      "projectUniqueName": "D:\\Visual Studio 2017 Code\\aspnet\\StudyCSharpBasics\\ConsoleApp12\\ConsoleApp12.csproj",
+      "projectName": "ConsoleApp12",
+      "projectPath": "D:\\Visual Studio 2017 Code\\aspnet\\StudyCSharpBasics\\ConsoleApp12\\ConsoleApp12.csproj",
       "packagesPath": "C:\\Users\\22343\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studio 2017 Code\\aspnet\\StudyCSharpBasics\\ConsoleApp11\\obj\\",
+      "outputPath": "D:\\Visual Studio 2017 Code\\aspnet\\StudyCSharpBasics\\ConsoleApp12\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
