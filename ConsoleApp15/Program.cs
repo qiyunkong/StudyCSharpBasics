@@ -51,6 +51,35 @@ namespace ConsoleApp15
             Console.WriteLine($"refclass.addNum:{refClass.addNum}");
 
 
+            /*
+             * string 特性分析
+             * string 类型的变量一经初始化，它的值是不能能够更改的，
+             * 当重新复制给变量时
+             * 系统会重新开辟一块内存空间，用来存放新的数值
+             * 而原有的数值没有发生变化
+             * 
+             * **/
+            string str = "old String";
+            ChangeStr(str);
+            Console.WriteLine(str);
+
+
+            /*
+             * ref 必须初始化
+             * 
+             * 
+             * **/
+            int num = 1;
+            Console.WriteLine("Before Changing, num:" + num);
+            ChangeValue(out num);
+            Console.WriteLine("After Changing, num:" + num);
+
+
+            string strs = "Old string";
+            Console.WriteLine("Before Changing, strs:" + strs);
+            ChangeString(ref str);
+            Console.WriteLine("After Changing strs:" + strs);
+
             Console.ReadKey();
            
         }
@@ -58,6 +87,22 @@ namespace ConsoleApp15
         public static void add(int addNum) {
             addNum = addNum + 1;
             Console.WriteLine($"addNum:{addNum}");
+        }
+
+        /*out 必须在变量中赋值 out是清空意思*/
+        public static void ChangeValue(out int num) {
+            num = 10;
+            Console.WriteLine("num: " + num);
+        }
+
+        public static void ChangeString(ref string str) {
+            str = "new str";
+            Console.WriteLine("str: " + str);
+        }
+
+        public static void ChangeStr(string oldStr) {
+            oldStr = "new String";
+            Console.WriteLine("oldStr:" + oldStr);
         }
     }
 }
@@ -116,4 +161,30 @@ reftype                            abc
     9.2.2 引用类型参数按照值传递
     当传递的类型是引用类型时，传递和操作的目标是指向对象的地址，
     而传递的实际内容是对地址的复制。由于地址指向的是实参的值，当方法对地址进行操作时，会对原来的发生修改。
+
+
+
+这个主要是因为string具有不变型，一旦被赋值，则它就是不可更改的。
+方法oldstr=“New String”代码表面上对内容进行了修改，但是由于string具有不变性，
+系统此时会重新分配一块内存空间存放NewString字符串，然后把分配的地址赋值给oldstr变量。
+所以，方法完成之后，str所指向的仍然是原来的old string，而oldstr则指向了New String。
+
+
+    9.2.3 值类型和引用类型参数的按引用传递
+不管是值类型还是引用类型，你都可以使用ref或者out关键字来实现参数的按引用传递。
+    并且在按照引用类型进行传递时候，方法的定义和调用必须显式的使用ref或者out关键字，不可以将它们省略，否则引起编译错误。
+在按照引用传递时，不管参数是值类型还是引用类型，本质都是一样的，都是通过ref或者out告诉编译器，方法传递的是参数地址,而非参数本身。
+
+    题---
+
+
+    ref, out, in三者的区别:
+ref:使用ref关键字进行值类型和引用类型参数的按引用传递时，传入的参数必须先被初始化,否则编译出错，在方法的内部可以不对传入的参数进行内部处理，传入的参数也可以被使用。
+out:使用out关键字进行值类型和引用类型参数的按引用传递时，传入的参数可以不先被初始化(如果传入的参数被事先初始化，在传入的过程中也会被清空) ,编译不会出错，但在方法的内部可以必须对传入的参数完成初始化操作，传入的参数才能够被使用，否则编译出错。
+in:默认的传递方式，向函数内部传送值，传入的过程中参数的初始值不会被改写。
+为方便理解，举一个简单的例子:
+lIn:过程不会改写ln的内容
+out:传入的值不会被过程所读取,但过程可以写ref:传入的值,过程会读,也会写
+例如:你把布料送到裁缝的一个收料箱(裁缝用这个区别是哪家客户)
+in:这块布料,不能动,我取时还要原样(我取时会要不要这块料,是我自己的事,你管不着,但你不能把这块料做任何改变.你只能看这块料的质地、色彩等等.你要想改变这块料.那自已去照这块料
 */
