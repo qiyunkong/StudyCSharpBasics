@@ -35,7 +35,42 @@ namespace ConsoleApp16
             Type t2 = typeof(DictionaryStringKey<string>);
             Console.WriteLine("Is open?" + t2.ContainsGenericParameters);
 
+            //
+            TypeWithStaticField<int>.OutField();
+            TypeWithStaticField<string>.OutField();
+            TypeWithStaticField<Guid>.OutField();
+
+
+            /*非泛型类：
+             * 对于非泛型类，不管创建多少个实例对象
+             * 同时都只存在一个静态字段
+             * **/
+            NonGenericStaticClass.Print();
+            NonGenericStaticClass.Print();
+
+            /*泛型类：
+             * 每一个泛型的实例对象都有自己的静态数据 
+             * 或者说每一个封闭泛型都具有自己的静态数据
+             * 同样的泛型参数 调用一次
+             * **/
+            GenericStaticClass<int>.Print();
+            GenericStaticClass<string>.Print();
+            GenericStaticClass<int>.Print();
+
+            Console.WriteLine("max(1)="+max(1,2));
+
             Console.ReadKey();
+        }
+
+        public static T Max<T>(T t1,T t2) {
+            if (t1 > t2)
+            {
+                return t1;
+            }
+            else {
+                return t2;
+            }
+            return t1;
         }
     }
 }

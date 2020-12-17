@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp9", "ConsoleApp9\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpBasics面向对象", "CSharpBasics面向对象", "{D84C806E-A62B-4E7C-B810-C1A4F7EF3584}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpBasics委托编程", "CSharpBasics委托编程", "{8CD6C4E7-6470-4725-B196-ABFAC25367AD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpBasics泛型编程", "CSharpBasics泛型编程", "{8CD6C4E7-6470-4725-B196-ABFAC25367AD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp11", "ConsoleApp11\ConsoleApp11.csproj", "{75B39238-8C3B-4865-BE51-0817C31D7960}"
 EndProject
